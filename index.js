@@ -19,7 +19,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 //Routes
-app.use("/", require("./routes/login"));
+require("./routes/bookRoute")(app);
+require("./routes/login")(app);
 
 const PORT = process.env.PORT || 3000;
 

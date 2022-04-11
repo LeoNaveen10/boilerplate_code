@@ -1,5 +1,6 @@
 module.exports = (sequelize, Sequelize) => {
   const DataTypes = Sequelize.DataTypes;
+
   const User = sequelize.define('User', {
     name: {
       type: DataTypes.STRING,
@@ -25,16 +26,3 @@ module.exports = (sequelize, Sequelize) => {
   return User;
 };
 
-/*
-create table users(
-  name varchar(50), 
-  email varchar(50), 
-  password varchar(50), 
-  location varchar(100), 
-  date datetime, 
-  createdAt datetime, 
-  updatedAt datetime, 
-  id int auto_increment,
-  primary key(id)
-  );
-*/
